@@ -93,7 +93,7 @@ c_state = torch.zeros(num_layers*num_directions, batch, hidden_size)  # For init
 plt.figure(1, figsize=(12, 5))
 plt.ion()  # To continuously plot
 
-hist = np.zeros(num_epochs)
+hist = np.zeros(num_epochs)  # Keep history of losses for plotting purpose
 
 for step in range(num_epochs):
 
@@ -134,9 +134,9 @@ for step in range(num_epochs):
         print("Epoch ", step, "MSE: ", loss_res.item())
     hist[step] = loss_res.item()
 
-    # plotting
-    plt.plot(steps, y_np.flatten(), 'r-')
-    plt.plot(steps, prediction.data.numpy().flatten(), 'b-')
+    # Plotting
+    plt.plot(steps, y_np.flatten(), 'r-')    # Ground truth
+    plt.plot(steps, prediction.data.numpy().flatten(), 'b-')  # Prediction
     plt.draw()
     plt.pause(0.05)
 
