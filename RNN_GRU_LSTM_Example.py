@@ -24,9 +24,8 @@ LR = 0.02  # Learning rate
 
 class RNN_GRU_LSTM(nn.Module):
     def __init__(self, flag):
-        self.flag = flag
         super(RNN_GRU_LSTM, self).__init__()
-
+        self.flag = flag
 
         if self.flag == 'RNN':
             self.rnn = nn.RNN(
