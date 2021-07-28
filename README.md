@@ -19,7 +19,7 @@ b) num_directions - 1 for Unidirectional (forward directional only) RNN/GRU/LSTM
 ```bash
 $ git clone https://github.com/nathanlem1/RNN_GRU_LSTM_Example.git
 $ cd RNN_GRU_LSTM_Example
-$ python SVM_PyTorch.py
+$ python RNN_GRU_LSTM_Example
 ```
 
 <br/>
